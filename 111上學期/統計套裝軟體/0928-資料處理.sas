@@ -6,6 +6,10 @@ Y2=OPD0-OPD1;
 Y3=OPD0*2;
 Y4=OPDFEE2/5;
 RUN;
+/*第 3-1 招：儲存永久檔*/
+DATA OUTPUT.DM5000N;
+SET DM5000;
+RUN;
 /*第 4 招：條件式 IF .... THEN... ; .....ELSE ; // IF .... THEN.....; ELSE
 IF...THEN... ;....ELSE...; 把變項重新分類，可同時做多個變項的重新分類* /
 DATA DM5000;
