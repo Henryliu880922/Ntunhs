@@ -9,10 +9,10 @@ getmode <- function(v) {
 
 getmode(data1$行動通訊費)
 
-uniqv<-unique(data1$行動通訊費)
-match1<-match(data1$行動通訊費, uniqv)
-tab1<-tabulate(match1)
-uniqv[which.max(tab1)]
+uniqv<-unique(data1$行動通訊費) #列出資料順序
+match1<-match(data1$行動通訊費, uniqv) #資料筆數
+tab1<-tabulate(match1) #出現次數
+uniqv[which.max(tab1)] #眾數
 
 as.numeric(names(table(data1$行動通訊費)))[which.max(table(data1$行動通訊費))] 
 table(data1$行動通訊費) #table可以看出資料的分布情況
