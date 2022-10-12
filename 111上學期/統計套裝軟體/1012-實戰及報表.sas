@@ -1,6 +1,10 @@
 /* 
 實戰算出分數及產出報表
 */
+PROC IMPORT OUT=Score123
+	DATAFILE="C:\Users\eshen\Desktop\SAS\S123.XLSX"
+	DBMS=EXCEL REPLACE;
+RUN;
 DATA Score123;
 SET Score123;
 IF A1=2 Then A1N=1; Else A1N=0;
